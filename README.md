@@ -1,5 +1,7 @@
 ## Domain info
 
+[![Build Status](https://secure.travis-ci.org/iafonov/domain_info.png)](http://travis-ci.org/iafonov/domain_info)
+
 Basic domain configuration wrapper & verifier. Allows one to verify whether domain is configured correctly for sending emails under its name. Built on top of ruby's built-in [`Resolv`](http://ruby-doc.org/stdlib-1.9.2/libdoc/resolv/rdoc/Resolv.html).
 
     domain = DomainInfo::Domain.new("github.com")
