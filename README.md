@@ -11,10 +11,10 @@ Basic domain configuration wrapper & verifier. Allows one to verify whether doma
     domain.ptr.valid?         # => true, domain's ip resolves to itself
 
     # Extracting SPF record
-    domain.spf.value          # => v=spf1 a mx include:spf.mtasv.net include:_spf.google.com a:smtp1-ext.rs.github.com ~all
+    domain.spf.value          # => v=spf1 a mx include:spf.mtasv.net ...
 
     # Extracting DKIM public key
-    domain.dkim("_key").value # => v=DKIM1 ......
+    domain.dkim("_key").value # => v=DKIM1 ...
 
 For more advanced things I recommend to go with [dnsruby](http://rubyforge.org/projects/dnsruby).
 
