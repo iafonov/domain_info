@@ -1,6 +1,6 @@
 require 'domain_info/util/dns_records'
 
-class DomainInfo::SPF
+class DomainInfo::SPF < DomainInfo::Record
   def initialize(domain)
     @domain = domain
     @spf = DomainInfo::DNSRecords.new(domain).detect{|txt_record| txt_record.start_with?("v=spf1")}

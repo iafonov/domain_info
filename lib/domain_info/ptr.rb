@@ -1,4 +1,4 @@
-class DomainInfo::PTR
+class DomainInfo::PTR < DomainInfo::Record
   def initialize(domain)
     @domain = domain
     @ptr = Resolv.getname(IPSocket::getaddress(domain))

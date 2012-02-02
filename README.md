@@ -7,16 +7,18 @@ Basic domain configuration wrapper & verifier. Allows one to verify whether doma
     domain = DomainInfo::Domain.new("github.com")
 
     # PTR record validation
-    domain.ptr.value          # => "github.com"
-    domain.ptr.valid?         # => true, domain's ip resolves to itself
+    domain.ptr.value              # => "github.com"
+    domain.ptr.present?           # => true
+    domain.ptr.valid?             # => true, domain's ip resolves to itself
 
     # Extracting SPF record
-    domain.spf.value          # => v=spf1 a mx include:spf.mtasv.net...
+    domain.spf.value              # => v=spf1 a mx include:spf.mtasv.net...
+    domain.spf.present?           # => true
 
     # Extracting DKIM public key
-    domain.dkim("_key").value # => v=DKIM1...
+    domain.dkim("_key").value     # => v=DKIM1...
+    domain.dkim("_key").present?  # => true
 
 For more advanced things I recommend to go with [dnsruby](http://rubyforge.org/projects/dnsruby).
 
-[Igor Afonov](http://iafonov.github.com) 2012
-MIT License
+[Igor Afonov](http://iafonov.github.com) 2012 MIT License
