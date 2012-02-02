@@ -6,6 +6,9 @@ Basic domain configuration wrapper & verifier. Allows one to verify whether doma
 
     domain = DomainInfo::Domain.new("github.com")
 
+    # IP
+    domain.ip                     # => "207.97.227.239"
+
     # PTR record validation
     domain.ptr.value              # => "github.com"
     domain.ptr.present?           # => true

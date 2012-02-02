@@ -5,6 +5,10 @@ class DomainInfo::Domain
     @domain = domain
   end
 
+  def ip
+    @ip ||= IPSocket::getaddress(domain)
+  end
+
   def ptr
     @ptr ||= DomainInfo::PTR.new(domain)
   end
