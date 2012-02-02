@@ -14,4 +14,8 @@ describe DomainInfo::Domain do
   it "has a DKIM record" do
     domain.dkim("_key").should_not be_nil
   end
+
+  it "has a default DKIM record" do
+    domain.default_dkim.should_not be_nil
+  end
 end
