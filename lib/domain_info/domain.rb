@@ -6,14 +6,14 @@ class DomainInfo::Domain
   end
 
   def ptr
-    @ptr ||= PTR.new(domain)
+    @ptr ||= DomainInfo::PTR.new(domain)
   end
 
   def spf
-    @spf ||= SPF.new(domain)
+    @spf ||= DomainInfo::SPF.new(domain)
   end
 
   def dkim(txt_name)
-    @dkim ||= DKIM.new(domain)
+    @dkim ||= DomainInfo::DKIM.new(domain, txt_name)
   end
 end
