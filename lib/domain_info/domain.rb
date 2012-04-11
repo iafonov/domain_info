@@ -6,7 +6,7 @@ class DomainInfo::Domain
   end
 
   def ip
-    @ip ||= IPSocket::getaddress(domain)
+    @ip ||= TCPSocket::getaddress(domain)
   end
 
   def ptr
